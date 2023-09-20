@@ -38,7 +38,7 @@ location / {
 
         client_max_body_size 10m;
         
-        proxy_pass https://<uri>;    	        
+        proxy_pass https://<uri:port>;    	        
 	proxy_set_header Host $proxy_host;
         proxy_set_header X-Real-IP $remote_addr;  //自訂一個header變數，名稱可隨意設定
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  

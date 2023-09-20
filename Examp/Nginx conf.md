@@ -40,5 +40,12 @@ location / {
         proxy_pass (Insert Application URL here);
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       
+	proxy_cache_key             "$scheme$host$request_uri";
+        proxy_cache                 STATIC;
+        proxy_cache_valid           200  7d;
+        proxy_cache_bypass  $http_cache_control;
+        proxy_cache_use_stale       error timeout invalid_header updating
+                                    http_500 http_502 http_503 http_504;
     }
 ```

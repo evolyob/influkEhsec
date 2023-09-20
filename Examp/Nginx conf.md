@@ -37,7 +37,8 @@ location / {
         try_files $uri $uri/ /index.php?$query_string;
 
         client_max_body_size 10m;
-        proxy_pass (Insert Application URL here);
+        add_header X-Proxy-Cache    $upstream_cache_status;
+        proxy_pass https://<uri>;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
        

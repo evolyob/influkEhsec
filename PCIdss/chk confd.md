@@ -12,12 +12,14 @@ DNS conf.d
 #dnf list installed bind
 #netstat -ntul
 - DNS root, 2log Serer
+# cat /etc/rsyslog.conf
 ```
 NTP conf.d
 ```php
 #chronyd -v
 #timedatectl
 -2log Serer
+# cat /etc/rsyslog.conf
 # cat /etc/chrony.conf
 ```
 LogServer conf.d
@@ -43,7 +45,7 @@ LinuxHardening
 # vi  /etc/pam.d/sshd
 #netstat -ltupn | grep LISTEN
 #systemctl list-unit-files | egrep 'service|enabled'
-#vi /etc/service  log agent ??
+# cat /etc/rsyslog.conf
 #chronyc tracking
 #cat /etc/chrony.conf
 ```

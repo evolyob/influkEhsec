@@ -78,4 +78,6 @@ System -> Administrator ->edit ->allowed hosts / subnets are in the list of trus
 系統管理 ->  系統管理員  ->  編輯普通管理員 -> 限制管理由受信任主機登入 (啟用)  
 ### Remove 0.0.0.0
 
-9. 
+9. logging is enabled on all firewall policies
+1.For allowed policies, "Log Allowed Traffic" is set on "All Sessions" option.
+2.For denied policies, "Log Violation Traffic" is enabled.

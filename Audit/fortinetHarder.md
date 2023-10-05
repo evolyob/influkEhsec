@@ -82,7 +82,7 @@ System -> Administrator ->edit ->allowed hosts / subnets are in the list of trus
 1.For allowed policies, "Log Allowed Traffic" is set on "All Sessions" option.
 2.For denied policies, "Log Violation Traffic" is enabled.
 
-10. Detect Botnet connections
+10. Detect Botnet connections IPS
 
 
 

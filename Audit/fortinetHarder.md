@@ -71,7 +71,7 @@ SNMP v3
 新增> 安全級別(認證)->認證演算法 sha512,變更密碼 -->Private加密演算法(AES256):密碼變更
 ### Remove 0.0.0.0 
 ```
-```
+```php
 8. all the login accounts having specific trusted hosts
 
 System -> Administrator ->edit ->allowed hosts / subnets are in the list of trusted Host
@@ -81,3 +81,13 @@ System -> Administrator ->edit ->allowed hosts / subnets are in the list of trus
 9. logging is enabled on all firewall policies
 1.For allowed policies, "Log Allowed Traffic" is set on "All Sessions" option.
 2.For denied policies, "Log Violation Traffic" is enabled.
+
+10. Detect Botnet connections
+
+
+
+
+
+
+
+```

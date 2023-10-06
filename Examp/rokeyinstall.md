@@ -46,5 +46,13 @@ systemctl enable chronyd
 echo '0 * * * * root chronyc -a makestep &> /dev/null' >> /etc/crontab
 echo 'chronyc -a makestep' >> /etc/rc.d/rc.local
 ###chronyc sources   檢查
+```
+```
+nfs主機內文件要先登記要開放的目錄給哪些主機
+vim /etc/exports
+exportfs -arv
+
+
+
 
 ```

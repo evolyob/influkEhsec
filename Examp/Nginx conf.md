@@ -22,6 +22,8 @@ server {
      ssl_session_cache shared:SSL:9m;
      ssl_session_cache shared:ssl_session_cache:10m;
      ssl_session_timeout 5m;
+     ssl_stapling on;             //Default: none
+     ssl_stapling_verify on;      //Default: none
 
      ssl_protocols TLSv1.2 TLSv1.3;
      ssl_ciphers 'EECDH+CHACHA20:EECDH+AES128:EECDH+AES256:!SHA1:!SHA256';

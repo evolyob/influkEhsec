@@ -102,3 +102,28 @@ Security Profiles > DNS Filte   Redirect botnet C&C requests to Block Portal" is
 資安管理設定-> DNS過濾 --> 重導botnet C&C 訪問要求到阻擋頁面--->  啟用
 資安管理設定-> DNS過濾 -->選項 --->記錄所有DNS詢問及回應--->  啟用
 ```
+
+```php
+14.Block high risk categories on Application Control
+Validate that "P2P" and "Proxy" category is blocked.
+資安管理設定-> 應用程式控制 --> 點進後 分類 ---> proxy, p2p ---->blocked
+資安管理設定-> 應用程式控制 --> 點進後 分類 ---> 未知應用程式  ----> 監控
+
+15.Block applications running on non-default ports
+Security Profiles > Application Contro >Block applications detected on non-default ports >enable
+資安管理設定-> 應用程式控制 --> 點進後 分類 ---> 選項 在非標準埠號阻擋此應用程式---->啟用
+Apply Application Control Security Profile to Policies
+??資安管理設定-> 應用程式控制 --> 點進後 分類 ---> 網路協定強制符規設定---->啟用
+```
+->  -->   --->   ---->
+```
+Enable Compromised Host Quarantine 受損主機隔離
+Security Fabric > Automation > Compromised Host Quarantine
+安全織網-> 自動化動作 --> 動作  --->   ---->
+?????????
+```
+VPN
+```
+
+
+```

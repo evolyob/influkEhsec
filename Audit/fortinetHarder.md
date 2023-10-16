@@ -115,15 +115,26 @@ Security Profiles > Application Contro >Block applications detected on non-defau
 Apply Application Control Security Profile to Policies
 ??資安管理設定-> 應用程式控制 --> 點進後 分類 ---> 網路協定強制符規設定---->啟用
 ```
-->  -->   --->   ---->
 ```
-Enable Compromised Host Quarantine 受損主機隔離
+16.Enable Compromised Host Quarantine 受損主機隔離
 Security Fabric > Automation > Compromised Host Quarantine
-安全織網-> 自動化動作 --> 動作  --->   ---->
+安全織網-> 自動化動作 --> 動作
 ?????????
 ```
 VPN
 ```
+17.Apply a Trusted Signed Certificate for VPN Portal
+System > Certificates > Import
+系統管理-> 憑證 -->  檢查信任的憑證
 
+18.maximum login attempts and lockout period
+set auth-lockout-threshold 5
+set auth-lockout-duration 300
+用戶&認證-> 身分驗證設置 -->  使用者認證選項 ---> 認證逾時 5分鐘
 
+```
+```
+19.Enable Event Logging
+Log & Report > Log Settings  >  Enable "All" Event Logging
+日誌與報表-> 紀錄設置 -->  紀錄設定 --->  事件紀錄 ----> 全部
 ```

@@ -83,11 +83,22 @@ System -> Administrator ->edit ->allowed hosts / subnets are in the list of trus
 2.For denied policies, "Log Violation Traffic" is enabled.
 
 10. Detect Botnet connections IPS
+資安管理設定 -> 入侵偵測防禦 --> botnet ---> Botnet C&C (block)
 
+11. Ensure Antivirus Definition Push Updates are Configured
+Under "FortiGuard Updates" ensure that the "Scheduled updates" is set to "Automatic".
+系統管理 -> FortiGuard --> FortiGuard更新 ---> 排成更新 ----> 全自動
 
+12.
+config antivirus settings
+set machine-learning-detection enable
 
+set outbreak-prevention block
+Use FortiGuard outbreak prevention database" is enabled.
+資安管理設定 -> 防毒配置 -->  病毒突發防護--->使用突發性防護資料庫---->啟用
 
-
-
-
+13.Enable Botnet C&C Domain Blocking DNS Filter
+Security Profiles > DNS Filte   Redirect botnet C&C requests to Block Portal" is enabled.
+資安管理設定-> DNS過濾 --> 重導botnet C&C 訪問要求到阻擋頁面--->  啟用
+資安管理設定-> DNS過濾 -->選項 --->記錄所有DNS詢問及回應--->  啟用
 ```

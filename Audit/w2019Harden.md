@@ -95,9 +95,14 @@ Interactive logon: Don't display last signed-in                              >>>
 Interactive logon: Machine inactivity limit                                  >>> 900 or fewer not 0
 Interactive logon: Prompt user to change password before expiration          >>> 5-14 Days
 Interactive logon: Require Domain Controller Authentication to unlock workstation >>> Enabled
+Interactive logon: Smart card removal behavior                               >>> Lock Workstation
+       
+Microsoft network client: Digitally sign communications                        >>> Enabled
+Microsoft network client: Send unencrypted password to third-party SMB servers >>> Disabled
+Options\Microsoft network server: Amount of idle time required before suspending session >>> 15 or fewer
 
 
-
+p209
 
 
 ```

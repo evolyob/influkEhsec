@@ -21,7 +21,26 @@ Act as part of the operating system             >>> No One
 Add workstations to domain                      >>> Administrators ??
 Adjust memory quotas for a process              >>> Administrators, LOCAL SERVICE, NETWORK SERVICE
 Allow log on locally                            >>> Administrators
-
+Assignment\Allow log on through Remote Desktop Services  >>> Administrators
+Allow log on through Remote Desktop Services    >>> Administrators, Remote Desktop Users
+Back up files and directories                   >>> Administrators
+Change the system time                          >>> Administrators, LOCAL SERVICE,
+Change the time zone                            >>> Administrators, LOCAL SERVICE,
+Create a pagefile                               >>> Administrators
+Create a token object                           >>> No One
+Create global objects                           >>> Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE
+Create permanent shared objects                 >>> No One
+Create symbolic links                           >>> Administrators, Virtual Machines
+Debug programs                                  >>> Administrators
+Deny access to this computer from the network   >>> Guests, Local account and member of Administrators group
+Deny log on as a batch job                      >>> Guests
+Deny log on as a service                        >>> Guests
+Deny log on locally                             >>> Guests
+Deny log on through Remote Desktop Services     >>> Guests, Local account
+Enable computer and user accounts to be trusted for delegation  >>> Administrators
+Force shutdown from a remote system             >>> Administrators
+Generate security audits              `         >>>LOCAL SERVICE, NETWORK SERVICE
+Impersonate a client after authentication       >>>Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE.
 
 
 ```

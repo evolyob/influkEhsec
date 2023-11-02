@@ -87,8 +87,15 @@ Domain member: Digitally encrypt or sign secure channel data                 >>>
 Domain member: Digitally encrypt secure channel data                         >>> Enabled
 Domain member: Digitally sign secure channel data                            >>> Enabled
 Domain member: Disable machine account password changes                      >>> Disabled
-Domain member: Maximum machine account password age                          >>> 30 or fewer days not 0
+Domain member: Maximum machine account password age                          >>> 30 or fewer not 0
 Domain member: Require strong session key                                    >>> Enabled
+
+Interactive logon: Do not require CTRL+ALT+DEL                               >>> Disabled
+Interactive logon: Don't display last signed-in                              >>> Enabled
+Interactive logon: Machine inactivity limit                                  >>> 900 or fewer not 0
+Interactive logon: Prompt user to change password before expiration          >>> 5-14 Days
+Interactive logon: Require Domain Controller Authentication to unlock workstation >>> Enabled
+
 
 
 

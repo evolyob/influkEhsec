@@ -16,10 +16,11 @@ Reset account lockout counter after           >>> 15 or more
 
 **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\
 Access Credential Manager as a trusted caller   >>> No One
-Access this computer from the network
-
-
-
+Access this computer from the network           >>> Administrators, Authenticated Users 
+Act as part of the operating system             >>> No One
+Add workstations to domain                      >>> Administrators ??
+Adjust memory quotas for a process              >>> Administrators, LOCAL SERVICE, NETWORK SERVICE
+Allow log on locally                            >>> Administrators
 
 
 

@@ -66,15 +66,29 @@ Synchronize directory service data             >>> No One
 ### Security Options
 ```php
 ***Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options\
-Accounts: Block Microsoft accounts             >>> Users can't add or log on with Microsoft accounts
-Accounts: Guest account status                 >>> Disabled
+Accounts: Block Microsoft accounts                 >>> Users can't add or log on with Microsoft accounts
+Accounts: Guest account status                                                >>> Disabled
+Accounts: Limit local account use of blank passwords to console logon only    >>> Enabled
+Accounts: Rename administrator account
+Accounts: Rename guest account
 
+Audit: Shut down system immediately if unable to log security audits         >>> Disabled
 
+Devices: Allowed to format and eject removable media                         >>> Administrators
+Devices: Prevent users from installing printer drivers                       >>> Enabled
 
+Domain controller: Allow server operators to schedule tasks                  >>> Disabled
+Domain controller: Allow vulnerable Netlogon secure channel connections      >>> Not Configured
+Domain controller: LDAP server channel binding token requirements            >>> Always
+Domain controller: LDAP server signing requirements                          >>> Require signing
+Domain controller: Refuse machine account password changes                   >>> Disabled
 
-
-
-
+Domain member: Digitally encrypt or sign secure channel data                 >>> Enabled
+Domain member: Digitally encrypt secure channel data                         >>> Enabled
+Domain member: Digitally sign secure channel data                            >>> Enabled
+Domain member: Disable machine account password changes                      >>> Disabled
+Domain member: Maximum machine account password age                          >>> 30 or fewer days not 0
+Domain member: Require strong session key                                    >>> Enabled
 
 
 

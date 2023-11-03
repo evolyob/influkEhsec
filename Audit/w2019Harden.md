@@ -99,10 +99,33 @@ Interactive logon: Smart card removal behavior                               >>>
        
 Microsoft network client: Digitally sign communications                        >>> Enabled
 Microsoft network client: Send unencrypted password to third-party SMB servers >>> Disabled
-Options\Microsoft network server: Amount of idle time required before suspending session >>> 15 or fewer
 
+Microsoft network server: Amount of idle time required before suspending session >>> 15 or fewer
+Microsoft network server: Digitally sign communications                        >>> Enabled
+Microsoft network server: Disconnect clients when logon hours expire           >>> Enabled
 
-p209
+Network access: Allow anonymous SID/Name translation                           >>> Disabled
+Network access: Do not allow anonymous enumeration of SAM accounts             >>> Enabled
+Network access: Do not allow anonymous enumeration of SAM accounts and shares  >>> Enabled **
+Network access: Do not allow storage of passwords and credentials for network authentication >>> Enabled **
+Network access: Let Everyone permissions apply to anonymous users              >>> Disabled
+Network access: Named Pipes that can be accessed anonymously                   >>>LSARPC, NETLOGON, SAMR ???
+Network access: Shares that can be accessed anonymously                        >>> <blank> (i.e. None).
+Network access: Sharing and security model for local accounts                  >>> Classic
+
+Network security: Allow Local System to use computer identity for NTLM         >>> Enabled**
+Network Security: Allow PKU2U authentication requests to this computer to use online identities >>> Disabled
+Network security: Configure encryption types allowed for Kerberos              >>> AES128_HMAC_SHA1, AES256_HMAC_SHA1,
+Network security: LAN Manager authentication level                             >>> Send NTLMv2 response only. Refuse LM & NTLM
+Network security: Minimum session security for NTLM SSP based (including secure RPC) clients/servers    >>> Require NTLMv2 session security, Require 128-bit encryption
+
+User Account Control: Admin Approval Mode for the Built-in Administrator account  >>> Enabled**
+User Account Control: Behavior of the elevation prompt for standard users         >>> Automatically deny elevation requests **
+User Account Control: Detect application installations and prompt for elevation   >>> Enabled**
+```
+
+```php
+*** Computer Configuration\Policies\Windows Settings\Security Settings\System Services\
 
 
 ```

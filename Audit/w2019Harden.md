@@ -207,7 +207,7 @@ Password Settings                                                    >>> 15 or m
 Configure SMB v1 client driver                                       >>> Enabled: Disable driver***
 Configure SMB v1 server                                              >>> Disabled
 
-
+P466
 
 
 

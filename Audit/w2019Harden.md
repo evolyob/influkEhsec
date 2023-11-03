@@ -154,7 +154,7 @@ Logging Customize\Log dropped packets                           >>> Yes***
 Logging Customize\Log successful connections                    >>> Yes***
 ```
 
-```
+```php
 ***Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\
 Account Logon\Audit Credential Validation                        >>> Success and Failure  ***
 Account Logon\Audit Kerberos Authentication Service              >>> Success and Failure ***
@@ -184,20 +184,28 @@ Object Access\Audit Removable Storage                            >>> Success and
 Policy Change\Audit MPSSVC Rule-Level Policy Change              >>> Success and Failure***
 Policy Change\Audit Other Policy Change Events                   >>> Failure***
 
+Privilege Use\Audit Sensitive Privilege Use                      >>> Success and Failure***
+System\Audit IPsec Driver                                        >>> Success and Failure***
+System\Audit Security System Extension                           >>> Success ***
+```
 
+```php
+***Computer Configuration\Policies\Administrative Templates\
+%% Control Panel\
+Personalization\Prevent enabling lock screen camera              >>> Enabled**
+Personalization\Prevent enabling lock screen slide show          >>> Enabled**
 
+Regional and Language Options\Allow users to enable online speech recognition services   >>> Disabled***
+Allow Online Tips                                               >>> Disabled***
 
+%% LAPS\
+Do not allow password expiration time longer than required by policy >>> Enabled**
+Enable Local Admin Password Management                               >>> Enabled**
+Password Settings                                                    >>> 15 or more,  30 or fewer
 
-
-
-
-
-
-
-
-
-
-
+%% MS Security Guide\
+Configure SMB v1 client driver                                       >>> Enabled: Disable driver***
+Configure SMB v1 server                                              >>> Disabled
 
 
 

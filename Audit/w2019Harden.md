@@ -126,6 +126,84 @@ User Account Control: Detect application installations and prompt for elevation 
 
 ```php
 *** Computer Configuration\Policies\Windows Settings\Security Settings\System Services\
+Print Spooler                                                >>> Disabled***
+
+***Computer Configuration\Policies\Windows Settings\Security Settings\Windows Firewall with Advanced Security\Windows Firewall with Advanced Security\Windows Firewall Properties\
+&& Domain Profile\
+
+Settings Customize\Display a notification                       >>> No***
+Logging Customize\Name                                          >>> %SystemRoot%\System32\logfiles\firewall\domainfw.log
+Logging Customize\Size limit (KB)                               >>> 16,384 KB or greater ***
+Logging Customize\Log dropped packets                           >>> Yes***
+Logging Customize\Log successful connections                    >>> Yes***
+
+&& Private Profile\
+Settings Customize\Display a notification                       >>> No***
+Logging Customize\Name                                          >>> %SystemRoot%\System32\logfiles\firewall\privatefw.log
+Logging Customize\Size limit (KB)                               >>> 16,384 KB or greater ***
+Logging Customize\Log dropped packets                           >>> Yes***
+Logging Customize\Log successful connections                    >>> Yes***
+
+&& Public Profile\
+Settings Customize\Display a notification                       >>> No***
+Settings Customize\Apply local firewall rules                   >>> No***
+Settings Customize\Apply local connection security rules        >>> No***
+Logging Customize\Name                                          >>> %SystemRoot%\System32\logfiles\firewall\publicfw.log
+Logging Customize\Size limit (KB)                               >>> 16,384 KB or greater ***
+Logging Customize\Log dropped packets                           >>> Yes***
+Logging Customize\Log successful connections                    >>> Yes***
+```
+
+```
+***Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\
+Account Logon\Audit Credential Validation                        >>> Success and Failure  ***
+Account Logon\Audit Kerberos Authentication Service              >>> Success and Failure ***
+Account Logon\Audit Kerberos Service Ticket Operations           >>> Success and Failure***
+
+Account Management\Audit Application Group Management            >>> Success and Failure***
+Account Management\Audit Computer Account Management             >>> Success and Failure***
+Account Management\Audit Distribution Group Management           >>> Success ***
+Account Management\Audit Other Account Management Events         >>> Success ***
+Account Management\Audit User Account Management                 >>> Success and Failure***
+
+Detailed Tracking\Audit PNP Activity                             >>> Success ***
+Detailed Tracking\Audit Process Creation                         >>> Success ***
+
+DS Access\Audit Directory Service Access                         >>> Failure***
+DS Access\Audit Directory Service Changes                        >>> Success ***
+
+Logon/Logoff\Audit Account Lockout                               >>> Failure***
+Logon/Logoff\Audit Group Membership                              >>> Success ***
+Logon/Logoff\Audit Other Logon/Logoff Events                     >>> Success and Failure***
+
+Object Access\Audit Detailed File Share                          >>> Failure***
+Object Access\Audit File Share                                   >>> Success and Failure***
+Object Access\Audit Other Object Access Events                   >>> Success and Failure***
+Object Access\Audit Removable Storage                            >>> Success and Failure***
+
+Policy Change\Audit MPSSVC Rule-Level Policy Change              >>> Success and Failure***
+Policy Change\Audit Other Policy Change Events                   >>> Failure***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```

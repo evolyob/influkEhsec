@@ -47,5 +47,5 @@ cat /etc/sysconfig/network-scripts/ifcfg-ens192
 cat /etc/NetworkManager/system-connections/ens32.nmconnection
 
 cat /etc/hosts
-
+cat /etc/firewalld/zones/public.xml
 ```

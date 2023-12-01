@@ -37,3 +37,15 @@
 ```
   #systemctl list-unit-files | egrep 'service|enabled'
 ```
+
+```
+網卡  
+##centos
+cat /etc/sysconfig/network-scripts/ifcfg-ens192
+
+##Rocky Linux
+cat /etc/NetworkManager/system-connections/ens32.nmconnection
+
+cat /etc/hosts
+
+```

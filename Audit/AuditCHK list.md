@@ -48,4 +48,7 @@ cat /etc/NetworkManager/system-connections/ens32.nmconnection
 
 cat /etc/hosts
 cat /etc/firewalld/zones/public.xml
+cat /etc/sudoers
+
+
 ```

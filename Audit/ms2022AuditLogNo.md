@@ -77,4 +77,7 @@
 4782	低	已存取帳戶的密碼雜湊。
 
 https://learn.microsoft.com/zh-tw/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor
+https://learn.microsoft.com/zh-tw/defender-for-identity/configure-windows-event-collection
+
+
 ```

@@ -311,17 +311,16 @@ mkdir ssl
 
 存放位置
 cd /etc/nginx/ssl/
-
-
-
-
 ```
-
-
-
-
-
-
+```php
+chk
+檢查
+1. firewall-cmd  --list-all
+2. chronyc tracking
+3. df -h (檢查空間 & NFS mount是否正常)
+4.  ps ax|grep php-fpm
+5.  ps ax|grep nginx
+```
 
 
 

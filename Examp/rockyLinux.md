@@ -321,9 +321,17 @@ chk
 4.  ps ax|grep php-fpm
 5.  ps ax|grep nginx
 ```
+```php
+vim /etc/bashrc
 
+原本rocky 9.3 預設權限是644
+   # Set default umask for non-login shell only if it is set to 0
+   #[ `umask` -eq 0 ] && umask 022     ###這段#起來
+加上這段即可
 
-
-
-
-
+    if [ $UID -gt 199 ] && [ "`/usr/bin/id -gn`" = "`/usr/bin/id -un`" ]; then
+       umask 002
+    else
+       umask 022
+    fi
+```

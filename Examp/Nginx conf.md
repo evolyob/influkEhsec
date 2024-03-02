@@ -53,3 +53,53 @@ location / {
         add_header X-Cache $upstream_cache_status;
     }
 ```
+
+
+```php
+設定 /etc/nginx/nginx.conf
+
+vim /etc/nginx/nginx.conf
+
+
+#worker_processes  auto;
+worker_processes  8;
+worker_rlimit_nofile 65535;
+
+events {
+    worker_connections  10240;
+    use epoll;
+}
+
+
+
+http {
+    fastcgi_intercept_errors on;
+
+
+    access_log  /var/log/nginx/access.log  main;
+    client_max_body_size 20m;
+
+
+    sendfile        on;
+    tcp_nopush      on;
+    tcp_nodelay     on;
+    server_tokens     off;
+
+    keepalive_timeout  65;
+```
+
+```php
+ 移除 /etc/nginx/conf.d/php-fpm.con
+cd /etc/nginx/conf.d
+
+mv php-fpm.conf  php-fpm.conf.bak
+
+
+NGINX 權限設定： php/session 資料夾改擁有者跟群組
+###如果網頁發生 500 error 的問題，通常就是session目錄權限，原本是apache要改為nginx
+
+cd /var/lib/php/
+chown nginx:nginx /var/lib/php/session/
+ls -ald /var/lib/php/session/
+
+```

@@ -254,10 +254,54 @@ reboot
 ulimit -a
 ```
 ```php
+user sudo 帳號權限
+vim /etc/sudoers
 
+root    ALL=(ALL)       ALL
+#100 新增
+mis01   ALL=(ALL)       ALL
+```
+```php
+要mount的系統都要安裝mount套件
+dnf install nfs-utils nfs4-acl-tools
+
+檢查mount設備是否可以連線
+showmount -e IP
+
+設定rc.local設定檔
+vim /etc/rc.d/rc.local
+範例
+	mount <ip>:/path
+	#mount 來源 目的 
+	#都設定mount在根目錄，所以要先在根目錄新增同名的目錄資料夾
+
+再到指定目錄下
+	cd /var/vhosts/www/storage/app/
+	
+ln連結相對應的目錄，不需新增目錄，不然會ln到目錄內	
+	ln -sf /path ./public
+	ll 				#檢查是否有ln成功，即可
+```
+
+```php
 
 
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

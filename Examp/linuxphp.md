@@ -76,7 +76,7 @@ memory_limit = 2048M
 error_log = "/var/log/php_error_log"
 
 #700
-post_max_size = 8M
+;post_max_size = 8M
 post_max_size = 200M
 
 #852

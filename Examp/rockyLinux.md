@@ -1,5 +1,5 @@
 
-```
+```php
 chk vm tool
 #vmware-toolbox-cmd -v
 
@@ -7,14 +7,14 @@ chk vm tool
 #rebot
 #yum update
 ```
-```
+```php
 disable selinux
 #vim /etc/selinux/config
 #SELINUX=enforcing
 SELINUX=disabled
 #rebot
 ```
-```
+```php
 #換網卡UUID
 #也可在網卡內把UUID設定#掉，不影響現行環境
 
@@ -27,7 +27,7 @@ vim /etc/NetworkManager/system-connections/ens32.nmconnection
 
 systemctl restart NetworkManager   #重啟網卡
 ```
-```
+```php
 #換系統的Machine ID
 hostnamectl					#顯示系統資訊
 rm /etc/machine-id			#移除ID，跳出確認訊息按 y 同意
@@ -39,7 +39,7 @@ hostnamectl					#再次顯示系統資訊
 cd /etc/rc.d
 chmod +x /etc/rc.d/rc.local
 ```
-```
+```php
 # 整點檢查時間同步
 yum install chrony
 vim /etc/chrony.conf
@@ -59,7 +59,7 @@ chronyc -a makestep   \\200 OK
 chronyc tracking
 chronyc sources  
 ```
-```
+```php
 密碼原則
 echo 'minlen=12' >> /etc/security/pwquality.conf
 echo 'dcredit=-1' >> /etc/security/pwquality.conf
@@ -89,7 +89,7 @@ vim /etc/shadow
 ###或是改指定帳號
 passwd -x 90 mis01
 ```
-```
+```php
 連線閒置時間
 
 vim /etc/ssh/sshd_config
@@ -110,7 +110,7 @@ export TMOUT=1800
 
 source /etc/profile  --使剛才修改的配置文件立即生效
 ```
-```
+```php
 # logrotate 檔案分割 設定 以"日"
 
 vim /etc/logrotate.conf
@@ -213,7 +213,7 @@ sysctl -a
 #重新載入
 sysctl -p
 ```
-```
+```php
 # ulimit
 
 vim /etc/security/limits.conf
@@ -253,11 +253,11 @@ DefaultLimitNPROC=5000000
 reboot
 ulimit -a
 ```
+```php
+
+
+
+
 ```
-
-
-
-
-
 
 

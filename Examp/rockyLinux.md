@@ -120,7 +120,7 @@ rotate 30
 
 logrotate -f /etc/logrotate.conf
 ```
-```
+```php
 網卡效能設定
 vim /etc/sysctl.conf
 增加

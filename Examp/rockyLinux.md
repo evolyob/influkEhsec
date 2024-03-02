@@ -302,11 +302,20 @@ yum module reset php
 
 php -m
 ```
+```php
+ssl 憑證
+get  ssl Key
+
+cd /etc/nginx
+mkdir ssl
+
+存放位置
+cd /etc/nginx/ssl/
+
+
+
+
 ```
-
-
-
-
 
 
 

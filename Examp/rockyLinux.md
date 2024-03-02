@@ -284,11 +284,25 @@ ln連結相對應的目錄，不需新增目錄，不然會ln到目錄內
 ```
 
 ```php
+#nginx 1.24.0
+dnf install http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.24.0-1.el8.ngx.x86_64.rpm
 
+yum install nginx
 
+nginx -v
 
+systemctl enable --now nginx
+
+yum install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
+
+yum module list php
+
+yum module reset php
+#檢查 php Modules 需如下
+
+php -m
 ```
-
+```
 
 
 

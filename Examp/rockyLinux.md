@@ -324,7 +324,7 @@ chk
 ```php
 vim /etc/bashrc
 
-原本rocky 9.3 預設權限是644
+原本rocky 9.3 預設權限是644-->664
    # Set default umask for non-login shell only if it is set to 0
    #[ `umask` -eq 0 ] && umask 022     ###這段#起來
 加上這段即可

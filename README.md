@@ -23,3 +23,13 @@ infra secure config and study note
 6. [notchx](https://notchxor.github.io/oscp-notes/)
 []()
 []()
+
+
+####
++ [公開資訊觀測站](https://mops.twse.com.tw/mops/web/index)
++ []()
++ []()
++ []()
++ []()
+[]()
+[]()

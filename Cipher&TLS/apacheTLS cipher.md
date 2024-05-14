@@ -16,6 +16,8 @@ Header always set X-Content-Type-Options nosniff
 Header always set X-XSS-Protection "1; mode=block"
 # (path: /etc/apache2/sites-available/)
 
+Header always set Referrer-Policy "strict-origin"
+
 SSLCompression      off
 SSLUseStapling on
 SSLSessionTickets   off
@@ -38,3 +40,4 @@ SSLCipherSuite "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH:!SHA1:"
 systemctl restart apache2
 ```
 https://devsecopsguides.com/docs/checklists
+https://webdock.io/en/docs/how-guides/security-guides/how-to-configure-security-headers-in-nginx-and-apache

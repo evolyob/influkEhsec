@@ -10,6 +10,7 @@ infra secure config and study note
 + [securityheaders](https://securityheaders.com/)
 + [opensearch](https://opensearch.org/docs/latest/)
 + [cipherlist](https://syslink.pl/cipherlist/)
++ [devsecopsguides](https://devsecopsguides.com/docs/checklists)
 
 []()
 []()

@@ -16,7 +16,7 @@ Header always set X-Content-Type-Options nosniff
 Header always set X-XSS-Protection "1; mode=block"
 # (path: /etc/apache2/sites-available/)
 
-Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Referrer-Policy "no-referrer, strict-origin-when-cross-origin"
 
 SSLCompression      off
 SSLUseStapling on

@@ -95,6 +95,8 @@ net.ipv6.conf.default.disable_ipv6 = 1
 NTP
 ```
 apt install chrony
+# systemctl stop systemd-timesyncd.service
+# systemctl mask systemd-timesyncd.service
 
 vi /etc/chrony/chrony.conf
 #pool ntp.ubuntu.com        iburst maxsources 4
@@ -118,7 +120,7 @@ PASS_MAX_DAYS   90
 vim /etc/ssh/sshd_config
 
 PermitRootLogin no
-122
+
 ClientAliveInterval 900
 ClientAliveCountMax 0
 
@@ -147,6 +149,25 @@ logrotate -f /etc/logrotate.conf
 
 vim /etc/hostname
 ```
+```
+apt install libpam-pwquality
+vi /etc/security/faillock.conf
+deny = 5
+unlock_time = 900
+
+vi /etc/security/pwquality.conf
+
+difok = 2
+minlen = 14
+minclass = 3
+dcredit = -1
+ucredit = -1
+lcredit = -1
+maxrepeat = 3
+maxsequence = 3
+dictcheck = 0
+enforcing = 0
 
 
 
+```

@@ -1,8 +1,12 @@
 ```
+#啟用設定
+sysctl -p /etc/sysctl.conf
+
+#檢查是否生效
 sysctl -a
-```
-```
-vi /etc/sysctl.conf
+
+#重新載入
+sysctl -p
 ```
 ```
 net.ipv4.tcp_timestamps=0
@@ -87,3 +91,62 @@ net.ipv4.tcp_tw_reuse = 1
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 ```
+
+NTP
+```
+apt install chrony
+
+vi /etc/chrony/chrony.conf
+#pool ntp.ubuntu.com        iburst maxsources 4
+
+server <ip> iburst
+
+```
+```
+systemctl stutas chronyd
+systemctl restart chronyd
+systemctl enable chronyd
+```
+
+帳號90天換密碼
+```
+vim /etc/login.defs
+PASS_MAX_DAYS   90
+```
+```
+連線閒置時間
+vim /etc/ssh/sshd_config
+
+PermitRootLogin no
+122
+ClientAliveInterval 900
+ClientAliveCountMax 0
+
+## 最後一行加上  #允許ssh 登入帳號
+AllowUsers
+```
+```
+systemctl restart sshd
+```
+
+```
+logrotate 檔案分割 設定 以"日"  90天或30天存檔
+
+vim /etc/logrotate.conf
+
+#weekly
+daily
+rotate 30
+
+###重整
+logrotate -f /etc/logrotate.conf
+```
+
+```
+# 改hostname名稱
+
+vim /etc/hostname
+```
+
+
+

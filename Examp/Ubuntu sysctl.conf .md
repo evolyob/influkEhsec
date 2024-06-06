@@ -113,6 +113,7 @@ systemctl enable chronyd
 帳號90天換密碼
 ```php
 vim /etc/login.defs
+# login.defs無法檢查密碼複雜度
 PASS_MAX_DAYS   180
 PASS_MIN_DAYS 1
 ```
@@ -244,7 +245,7 @@ password    required            pam_cracklib.so retry=3 minlen=14 dcredit=-1 ucr
 # Limit Password Reuse
 password    sufficient          pam_unix.so remember=5
 # here are the per-package modules (the "Primary" block)
-password        requisite                       pam_pwquality.so retry=3
+password        requisite                       pam_pwquality.so retry=5
 #password        [success=1 default=ignore]      pam_unix.so obscure use_authtok try_first_pass yescrypt
 password        	[success=2 default=ignore]	     pam_unix.so obscure use_authtok try_first_pass sha512
 # here's the fallback if no module succeeds
@@ -301,4 +302,20 @@ ForwardToSyslog=no
 #LineMax=48K
 #ReadKMsg=yes
 #Audit=no
+```
 
+```
+#修改 PAM 設定以報告登入失敗
+vi  /etc/pam.d/common-auth
+
+# pam-auth-update(8) for details.
+
+# here are the per-package modules (the "Primary" block)
+auth    [success=1 default=ignore]      pam_unix.so nullok
+######
+auth	   [success=1 default=ignore]	     pam_exec.so quiet /usr/libexec/defender_iot_micro_agent/pam/pam_audit.sh 2
+auth	   [success=1 default=ignore]	     pam_echo.so
+# here's the fallback if no module succeeds
+auth    requisite                       pam_deny.so
+
+```

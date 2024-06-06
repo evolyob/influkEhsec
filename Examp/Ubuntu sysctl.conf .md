@@ -105,9 +105,10 @@ server <ip> iburst
 
 ```
 ```php
-systemctl stutas chronyd
-systemctl restart chronyd
-systemctl enable chronyd
+systemctl stutas chrony
+systemctl restart chrony
+systemctl enable chrony
+chronyc sources -v
 ```
 
 帳號90天換密碼
@@ -304,7 +305,7 @@ ForwardToSyslog=no
 #Audit=no
 ```
 
-```
+```php
 #修改 PAM 設定以報告登入失敗
 vi  /etc/pam.d/common-auth
 

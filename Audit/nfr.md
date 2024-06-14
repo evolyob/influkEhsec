@@ -1,0 +1,72 @@
+### Security
+
+- Acknowledge support for EDGE'; third party security assessment need and comply with relevant policies and practices
+- Describe how security is embedded into SDLC lifecycle
+- Has the latest version of application ecosystem (including all components) has been secure code reviewed and penetration tested by an independent third party?
+- Are there specific enforcement modules within the solution to consistently apply security controls: identity and access management, encryption, segmentation, input validation, authentication, authorisation, data protection and security event logging  
+- How is the application designed for malice to protect against threats (internal and external)?
+
+- Is detailed security logging enabled in the application ecosystem and can be forwarded to centralized security ⁠logging system? What integration methods are supported?
+- Single Sign On - Does solution support ability to login once into multiple applications by using Claim based Authentication using SAML 2.0 ? 
+- Support open and standard protocols for authentication, authorization and preserving data confidentiality (Open ID, SAML 2.0, OAuth etc).
+- Does solution support ability to encrypt sensitive data at-rest. What operational / performance impact will this cause? Has this been fully tested in the vendor&apos;s environment?
+- Support Multi Factor Authentication. (The solution should support Claim based Authentication using SAML 2.0. The solution should be able to woks on the basis of mutual trust relationships between a Service Provider (SP) and multiple Identity Providers (IdP). The solution should be using open and standard protocols for authentication (Open ID, SAML 2.0, OAuth etc.)
+- Does solution support ability to provide Role based access control (Authorization) based on least privilege and need-to-know basis?
+-  Does the authorization follow only after successful authentication? 
+- Does solution support ability to encrypt sensitive data in-transit ?
+- Does the application ecosystem support multi-security zoning architecture? 
+-  Does the application support latest operating system and dependent software applications?
+- Does the administrator and normal user UIs have different access methods? 
+
+### Reporting & Dashboards
+
+- What geographical locations can the data be stored
+- Does solution support ability to develop custom reports ?
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  
+- 
+- 
+-  

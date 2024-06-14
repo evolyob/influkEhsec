@@ -9,7 +9,7 @@
 - Is detailed security logging enabled in the application ecosystem and can be forwarded to centralized security ⁠logging system? What integration methods are supported?
 - Single Sign On - Does solution support ability to login once into multiple applications by using Claim based Authentication using SAML 2.0 ? 
 - Support open and standard protocols for authentication, authorization and preserving data confidentiality (Open ID, SAML 2.0, OAuth etc).
-- Does solution support ability to encrypt sensitive data at-rest. What operational / performance impact will this cause? Has this been fully tested in the vendor&apos;s environment?
+- Does solution support ability to encrypt sensitive data at-rest. What operational / performance impact will this cause? Has this been fully tested in the vendor's environment?
 - Support Multi Factor Authentication. (The solution should support Claim based Authentication using SAML 2.0. The solution should be able to woks on the basis of mutual trust relationships between a Service Provider (SP) and multiple Identity Providers (IdP). The solution should be using open and standard protocols for authentication (Open ID, SAML 2.0, OAuth etc.)
 - Does solution support ability to provide Role based access control (Authorization) based on least privilege and need-to-know basis?
 -  Does the authorization follow only after successful authentication? 
@@ -90,14 +90,14 @@
 - What is the disaster recovery plan, and how does it ensure continued availability in case of catastrophic failures or natural disasters?
 - What are the Plans for redundancy/failover/High Availability mechanisms to ensure availability with in a Data Center ?
 - What are the Plans for redundancy/failover/High Availability mechanisms to ensure availability across Data Centers ?
-- What is the system&apos;s recovery time objective (RTO), or the maximum allowable downtime in case of a failure? How is it achieved ?
+- What is the system's recovery time objective (RTO), or the maximum allowable downtime in case of a failure? How is it achieved ?
 
 ### Backup
-- What is the system&apos;s recovery point objective (RPO), or the maximum amount of data loss period in case of a failure? How is it achieved ?
+- What is the system's recovery point objective (RPO), or the maximum amount of data loss period in case of a failure? How is it achieved ?
 - What measures are in place to maintain data integrity and prevent data corruption or loss during components failures or disaster?
 
 ### Databases
-- Describe the system&apos;s backup and restore procedures, including the frequency of backups and testing of the restore process
+- Describe the system's backup and restore procedures, including the frequency of backups and testing of the restore process
 
 ### Support with SLA
 - The solution should support use of databases to store user data, and the database must be reliable, scalable, and secure. The solution should support applying the required data protection controls at the database levels.

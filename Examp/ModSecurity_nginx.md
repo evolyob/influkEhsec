@@ -76,11 +76,68 @@ load_module modules/ngx_http_modsecurity_module.so;
 Step 5. Install Nginx configuration
 ```
 ubuntu
-Open /etc/nginx/nginx.conf and add the following line after including “/etc/nginx/sites-enabled/*.conf”
+###Open /etc/nginx/nginx.conf and add the following line after including “/etc/nginx/sites-enabled/*.conf”
 include /etc/nginx/cpguard_waf_load.conf;
 
+###Add the following contents to /etc/nginx/cpguard_waf_load.conf
+modsecurity on;
+modsecurity_rules_file /etc/nginx/nginx-modsecurity.conf;
 
+###Add following contents to /etc/nginx/nginx-modsecurity.conf
+SecRuleEngine On
+SecRequestBodyAccess On
+SecDefaultAction "phase:2,deny,log,status:406"
+SecRequestBodyLimitAction ProcessPartial
+SecResponseBodyLimitAction ProcessPartial
+SecRequestBodyLimit 13107200
+SecRequestBodyNoFilesLimit 131072
+SecPcreMatchLimit 250000
+SecPcreMatchLimitRecursion 250000
+SecCollectionTimeout 600
+SecDebugLog /var/log/nginx/modsec_debug.log
+SecDebugLogLevel 0
+SecAuditEngine RelevantOnly
+SecAuditLog /var/log/nginx/modsec_audit.log
+SecUploadDir /tmp
+SecTmpDir /tmp
+SecDataDir /tmp
+SecTmpSaveUploadedFiles on
+# Include file for cPGuard WAF
+Include /etc/nginx/cpguard_waf.conf
+```
+Step 5. Install Nginx configuration
+```
 rocky
+###Open /etc/nginx/conf.d/nginx_modsec.conf and add the following line into it.
+modsecurity on;
+modsecurity_rules_file /etc/nginx/cpguard-modsecurity.conf;
 
+###2. Add the following contents to /etc/nginx/cpguard-modsecurity.conf
+SecRuleEngine On
+SecRequestBodyAccess On
+SecDefaultAction "phase:2,deny,log,status:406"
+SecRequestBodyLimitAction ProcessPartial
+SecResponseBodyLimitAction ProcessPartial
+SecRequestBodyLimit 13107200
+SecRequestBodyNoFilesLimit 131072
+SecPcreMatchLimit 250000
+SecPcreMatchLimitRecursion 250000
+SecCollectionTimeout 600
+SecDebugLog /var/log/nginx/modsec_debug.log
+SecDebugLogLevel 0
+SecAuditEngine RelevantOnly
+SecAuditLog /var/log/nginx/modsec_audit.log
+SecUploadDir /tmp
+SecTmpDir /tmp
+SecDataDir /tmp
+SecTmpSaveUploadedFiles on
+# Include file for cPGuard WAF
+Include /etc/nginx/cpguard_waf.conf
 
+```
+```
+waf_server = nginx
+waf_server_conf = /etc/nginx/cpguard_waf.conf
+waf_server_restart_cmd = /usr/sbin/service nginx restart
+waf_audit_log = /var/log/nginx/modsec_audit.log
 ```

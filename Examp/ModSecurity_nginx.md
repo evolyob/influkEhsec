@@ -32,6 +32,7 @@ make install
 
 nginx -V
 ```
+Step 3. Download and Compile ModSecurity v3 Nginx Connector Source Code
 ```
 # ubuntu  # rocky
 
@@ -62,6 +63,7 @@ make modules
 cp objs/ngx_http_modsecurity_module.so /usr/share/nginx/modules/
 
 ```
+Step4. Load ModSecurity Module into Nginx
 ```
 # ubuntu 
 Open file /etc/nginx/modules-enabled/50-mod-http-modsecurity.conf and add the following contents
@@ -71,7 +73,7 @@ load_module modules/ngx_http_modsecurity_module.so;
 Open file /etc/nginx/mod-http-modsecurity.conf and add the following contents
 load_module modules/ngx_http_modsecurity_module.so;
 ```
-
+Step 5. Install Nginx configuration
 ```
 ubuntu
 Open /etc/nginx/nginx.conf and add the following line after including “/etc/nginx/sites-enabled/*.conf”

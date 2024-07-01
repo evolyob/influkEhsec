@@ -13,8 +13,7 @@ yum install -y  httpd-devel pcre pcre-devel libxml2 libxml2-devel curl curl-deve
 ```
 
 ```
-# ubuntu
-# rocky
+# ubuntu  # rocky
 cd /usr/local/src
 git clone --depth 100 -b v3/master --single-branch https://github.com/SpiderLabs/ModSecurity
 cd ModSecurity
@@ -34,9 +33,7 @@ make install
 nginx -V
 ```
 ```
-
-ubuntu
-rocky
+# ubuntu  # rocky
 
 mkdir /usr/local/src/cpg
 cd /usr/local/src/cpg
@@ -66,13 +63,20 @@ cp objs/ngx_http_modsecurity_module.so /usr/share/nginx/modules/
 
 ```
 ```
-ubuntu
-rocky
+# ubuntu 
+Open file /etc/nginx/modules-enabled/50-mod-http-modsecurity.conf and add the following contents
+load_module modules/ngx_http_modsecurity_module.so;
+
+# rocky
+Open file /etc/nginx/mod-http-modsecurity.conf and add the following contents
 load_module modules/ngx_http_modsecurity_module.so;
 ```
 
 ```
 ubuntu
+Open /etc/nginx/nginx.conf and add the following line after including “/etc/nginx/sites-enabled/*.conf”
+include /etc/nginx/cpguard_waf_load.conf;
+
 
 rocky
 

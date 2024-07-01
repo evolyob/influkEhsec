@@ -141,3 +141,4 @@ waf_server_conf = /etc/nginx/cpguard_waf.conf
 waf_server_restart_cmd = /usr/sbin/service nginx restart
 waf_audit_log = /var/log/nginx/modsec_audit.log
 ```
+https://opsshield.com/help/cpguard/category/waf/

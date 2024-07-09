@@ -14,4 +14,16 @@ smtpd_tls_exclude_ciphers = EXP, MEDIUM, LOW, DES, 3DES, SSLv2, aNULL, SHA, DH
 disable_vrfy_command=yes
 
 ```
+當所有請求集中在一起轉發到 back-end server 時
+如果在這之中有不合法的請求的話，此不合法的請求會被當成下一個請求被 back-end server
 
+CVE-2023-51764 postfix: SMTP smuggling vulnerability
+
+```
+vi /etc/postfix/main.cf
+
+smtpd_forbid_unauth_pipelining = yes
+```
+```
+postfix reload
+```
